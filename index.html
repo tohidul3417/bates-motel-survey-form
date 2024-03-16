@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bates Motel Survey Form</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <main>
+        <h1>Bates Motel Survey Form</h1>
+        <p>We value your feedback to help us improve our motel services.</p>
+
+        <!-- Start of the Survey Form -->
+        <form action="/submit-form" method="POST" class="survey-form">
+            <!-- Personal information section -->
+            <section class="form-section">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                </div>
+
+                <div class="form-gorup">
+                    <label for="age">Age <span class="optional">(Optional)</span></label>
+                    <input type="number" id="age" name="age" min="13" max="125" placeholder="Age">
+                </div>
+            </section>
+
+            <!-- Recommendation section -->
+            <section class="form-section">
+                <fieldset>
+                    <legend>Will you recommend this motel to your friend?</legend>
+                    <label><input type="radio" value="Definitely" name="recommendation"> Definitely</label>
+                    <label><input type="radio" value="May be" name="recommendation"> May be</label>
+                    <label><input type="radio" value="Not sure" name="recommendation"> Not sure</label>
+                </fieldset>
+            </section>
+
+            <!-- Improvement areas suggestion section -->
+            <section class="form-section">
+                <fieldset>
+                    <legend>Which of these areas should be improved?</legend>
+                    <label><input type="checkbox" value="Room Service" name="improvement"> Room Service</label>
+                    <label><input type="checkbox" value="Room Decoration" name="improvement"> Room Decoration</label>
+                    <label><input type="checkbox" value="Bathing Facility" name="improvement"> Bathing Facility</label>
+                </fieldset>
+            </section>
+
+            <!-- Favorite feature section -->
+            <section class="form-section">
+                    <label for="favorite-feature">What do you like most about our motel?</label>
+                    <select id="favorite-feature" name="favorite-feature">
+                        <option value="">Choose an option</option>
+                        <option value="Room Service">Room Service</option>
+                        <option value="Quality of Room">Quality of Room</option>
+                        <option value="Pricing">Pricing</option>
+                    </select>
+            </section>
+
+            <!-- Comments section -->
+            <section class="form-section">
+                <label for="comments">Any comments or suggestions</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Your comments or suggestions here"></textarea>
+            </section>
+
+            <!-- Submit button for the form -->
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
